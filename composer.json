@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ronanchilvers\\Silex\\": "src/"
+            "Ronanchilvers\\": "src/"
         }
     },
     "require": {
