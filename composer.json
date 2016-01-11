@@ -1,0 +1,21 @@
+{
+    "name": "ronan/silex-spot2-provider",
+    "description": "Provider for the Spot2 orm (vlucas/spot2)",
+    "authors": [
+        {
+            "name": "Ronan Chilvers",
+            "email": "ronan@d3r.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ronanchilvers\\Silex\\": "src/"
+        }
+    },
+    "require": {
+        "silex/silex": "^1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    }
+}
