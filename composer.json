@@ -1,5 +1,5 @@
 {
-    "name": "ronan/silex-spot2-provider",
+    "name": "ronanchilvers/silex-spot2-provider",
     "description": "Provider for the Spot2 orm (vlucas/spot2)",
     "authors": [
         {
