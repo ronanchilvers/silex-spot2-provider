@@ -1,10 +1,14 @@
 {
     "name": "ronanchilvers/silex-spot2-provider",
     "description": "Provider for the Spot2 orm (vlucas/spot2)",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["spot2", "silex", "service provider", "orm"],
     "authors": [
         {
             "name": "Ronan Chilvers",
-            "email": "ronan@d3r.com"
+            "email": "ronan@d3r.com",
+            "role": "developer"
         }
     ],
     "autoload": {
