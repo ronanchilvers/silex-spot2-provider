@@ -1,5 +1,7 @@
 # Silex Provider for the Spot2 ORM
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/c05785aa-3f31-41a3-8d08-399691e0d407/mini.png)](https://insight.sensiolabs.com/projects/c05785aa-3f31-41a3-8d08-399691e0d407)
+
 Spot2 is a simple ORM for [Silex](http://silex.sensiolabs.org/) projects based on the data mapper pattern. You can read more about it [on the github page](https://github.com/vlucas/spot2) or the [documentation site](http://phpdatamapper.com/).
 
 This project comprises a service provider and utility for hooking Spot2 up to your Silex app.
