@@ -44,11 +44,13 @@ class Spot2ServiceProvider implements ServiceProviderInterface
      */
     public function register(Application $app)
     {
-        $app['spot2.connections'] = [];
+        $app['spot2.connections']         = [];
+        $app['spot2.connections.default'] = null;
         $app['spot2.config'] = $app->share(function (Application $app) {
             $config = new Config();
             foreach ($app['spot2.connections'] as $name => $data) {
-                $config->addConnection($name, $data);
+                $default = ($app['spot2.connections.default'] === $name) ? true : false ;
+                $config->addConnection($name, $data, $default);
             }
 
             return $config;
