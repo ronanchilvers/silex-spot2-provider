@@ -29,9 +29,9 @@ $app->register(new \Ronanchilvers\Silex\Provider\Spot2ServiceProvider(), [
 
 $app->get('/things', function() use ($app) {
     $mapper = $app['spot2.locator']->mapper('Entity\Thing');
-    
-    $this->render('things.twig', [ 
-        'things' => $mapper->all() 
+
+    $this->render('things.twig', [
+        'things' => $mapper->all()
     ]);
 });
 ```
@@ -54,7 +54,7 @@ This method is a shortcut for getting a mapper out for a particular entity.
 ```php
 $app->get('/things', function() use ($app) {
     $mapper = $this->mapper('Entity\Thing');
-    
+
     return $this->render('things.twig', [
         'things' => $mapper->all()
     ]);
@@ -66,7 +66,7 @@ This method is a shortcut for getting the spot2 locator object. Most of the time
 ```php
 $app->get('/things', function() use ($app) {
     $mapper = $this->spot2()->mapper('Entity\Thing');
-    
+
     return $this->render('things.twig', [
         'things' => $mapper->all()
     ]);
