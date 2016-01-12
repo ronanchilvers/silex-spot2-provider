@@ -73,3 +73,10 @@ $app->get('/things', function() use ($app) {
 });
 ```
 
+## Services Exposed
+The Spot2ServiceProvider exposes the following services.
+
+- `spot2.connections` - an array of connection DSNs or DBAL style configuration arrays
+- `spot2.connections.default` - the name of the default connection to use. Spot2 will take the first defined one as the default if you don't set one explicitly.
+- `spot2.config`- the Spot2 config object
+- `spot2.locator` - the Spot2 locator object
