@@ -19,7 +19,7 @@ trait Spot2Trait
      *
      * @author Ronan Chilvers <ronan@d3r.com>
      */
-    public function spot()
+    public function spot2()
     {
         return $this['spot2.locator'];
     }
