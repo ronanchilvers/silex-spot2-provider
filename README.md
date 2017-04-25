@@ -11,7 +11,7 @@ This project comprises a service provider and utility for hooking Spot2 up to yo
 The easiest mechanism is via composer. :
 
 ```bash
-composer require ronanchilvers/silex-spot2-provider
+composer require ronanchilvers/silex-spot2-provider ^1.0
 ```
 
 Silex2 is supported in the master branch although there isn't yet a release. If you want to use the Silex2 version you can do:
