@@ -46,7 +46,7 @@ class Spot2ServiceProvider implements ServiceProviderInterface
     {
         $app['spot2.connections']         = [];
         $app['spot2.connections.default'] = null;
-        $app['spot2.config'] = $app->share(function (Application $app) {
+        $app['spot2.config'] = function (Application $app) {
             $config = new Config();
             foreach ($app['spot2.connections'] as $name => $data) {
                 $default = ($app['spot2.connections.default'] === $name) ? true : false ;
@@ -54,10 +54,10 @@ class Spot2ServiceProvider implements ServiceProviderInterface
             }
 
             return $config;
-        });
-        $app['spot2.locator'] = $app->share(function (Application $app) {
+        };
+        $app['spot2.locator'] = function (Application $app) {
             return new Locator($app['spot2.config']);
-        });
+        };
     }
 
     /**
