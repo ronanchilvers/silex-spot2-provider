@@ -2,8 +2,8 @@
 
 namespace Ronanchilvers\Silex\Provider;
 
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 use Spot\Config;
 use Spot\Locator;
 
@@ -38,36 +38,36 @@ class Spot2ServiceProvider implements ServiceProviderInterface
      * ];
      * </code>
      *
-     * @param Silex\Application $app
+     * @param Pimple\Container $container
      *
      * @author Ronan Chilvers <ronan@d3r.com>
      */
-    public function register(Application $app)
+    public function register(Container $container)
     {
-        $app['spot2.connections']         = [];
-        $app['spot2.connections.default'] = null;
-        $app['spot2.config'] = function (Application $app) {
+        $container['spot2.connections']         = [];
+        $container['spot2.connections.default'] = null;
+        $container['spot2.config'] = function (Container $container) {
             $config = new Config();
-            foreach ($app['spot2.connections'] as $name => $data) {
-                $default = ($app['spot2.connections.default'] === $name) ? true : false ;
+            foreach ($container['spot2.connections'] as $name => $data) {
+                $default = ($container['spot2.connections.default'] === $name) ? true : false ;
                 $config->addConnection($name, $data, $default);
             }
 
             return $config;
         };
-        $app['spot2.locator'] = function (Application $app) {
-            return new Locator($app['spot2.config']);
+        $container['spot2.locator'] = function (Container $container) {
+            return new Locator($container['spot2.config']);
         };
     }
 
     /**
      * Boot the provider.
      *
-     * @param Silex\Application $app
+     * @param Pimple\Container $container
      *
      * @author Ronan Chilvers <ronan@d3r.com>
      */
-    public function boot(Application $app)
+    public function boot(Container $container)
     {
     }
 }
