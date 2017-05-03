@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronanchilvers\Silex\Application;
+namespace Ronanchilvers\Silex\Spot2\Application;
 
 /**
  * Simple utility trait for the Silex\Application object.

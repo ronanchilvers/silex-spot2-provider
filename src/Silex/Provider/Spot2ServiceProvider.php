@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronanchilvers\Silex\Provider;
+namespace Ronanchilvers\Silex\Spot2\Provider;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
